@@ -31,15 +31,9 @@
         <h2 id="kedai">KEDAI KOPI NUSANTARA</h2>
         <!-- Add more content here -->
 
-     <audio id="myAudio" src="music.mp3" preload="auto"></audio>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const audio = document.getElementById('myAudio');
-            audio.play().catch((error) => {
-                console.log('Auto-play was prevented:', error);
-            });
-        });
-    </script>
+     <audio id="background-music" autoplay>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
 
     
 
