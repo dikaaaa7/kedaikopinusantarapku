@@ -54,11 +54,3 @@ setInterval(createGlitter, 100); // Create new glitter every 100ms
 
 
 
-window.addEventListener('load', function() {
-    const audio = document.getElementById('background-music');
-    audio.volume = 0.2; // Atur volume dari 0 (diam) hingga 1 (volume penuh)
-    
-    audio.play().catch(error => {
-        console.log('Auto-play was prevented:', error);
-    });
-});
