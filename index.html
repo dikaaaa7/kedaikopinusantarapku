@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Opening Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+    </style>
+</head>
+<body>
+    <div class="envelope" onclick="openInvitation()">
+        <div class="flap">
+            <img src="Logo Besar.png" alt="" width="150cm" height="auto" class="logoamplop">
+        </div>
+        <div class="front">
+            <h1 class="text">GRAND OPENING <p id="button"> OPEN INVITATION</p></h1>
+            
+        </div>
+    </div>
+
+
+
+    <div id="invitation-content" class="hidden">
+        <div id="glitter-container"></div>
+        <img src="Logo Besar.png" alt="" width="150cm" height="auto">
+        <p class="invite"> Your Invited for the</p>
+        <h1 id="grand">GRAND </h1>
+        <h1 id="opening">OPENING </h1>
+        <h2 id="kedai">KEDAI KOPI NUSANTARA</h2>
+        <!-- Add more content here -->
+
+     <!-- Audio element for background music -->
+     <audio id="background-music" autoplay loop>
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+    
+
+    <!-- Halaman Informasi -->
+    <section class="pageinfo">
+        <p><strong class="tanggal">TANGGAL : </strong></p>
+        <p id="text1">20 September 2024</p>
+        <p><strong class="lokasi">LOKASI : </strong></p>
+        <p id="text2">Jl. Riau ujung No.88 G</p>
+        <p><strong class="waktu">WAKTU : </strong></p>
+        <p id="text3"> 18:00 s.d Selesai</p>
+        <div id="countdown"></div>
+    </section>
+
+    <!-- <section class="page closing">
+        <div class="map">
+            <h5 style=" margin-bottom: 0px; font-style: bold;"> LOCATION OF CEREMONY :</h5>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1677.439024141921!2d101.41304869055149!3d0.5348029633458141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab9527067b13%3A0x8460ed918e1a934b!2sJl.%20Riau%20Ujung%20No.88%2C%20Air%20Hitam%2C%20Kec.%20Payung%20Sekaki%2C%20Kota%20Pekanbaru%2C%20Riau%2028291!5e0!3m2!1sid!2sid!4v1725617003194!5m2!1sid!2sid" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+     </section> -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
