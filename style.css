@@ -235,6 +235,20 @@ body {
     color: #c7611c;
 }
 
+
+/* Container untuk menyusun item-item secara sebaris */
+    .icon-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    /* Style untuk item yang terdiri dari bulatan dan tulisan */
+    .item {
+        text-align: center;
+    }
+
   /* Style untuk item yang terdiri dari bulatan dan tulisan */
     .item {
         text-align: center;
