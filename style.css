@@ -274,27 +274,40 @@ body {
         font-weight: bold;
     }
 
-/* Gaya untuk detail nama dan informasi orang */
-.details {
-    flex: 1;
-    margin-right: 15px; /* Mengurangi jarak untuk keselarasan */
-}
+/* Container utama untuk undangan */
+    .invitation-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border: 1px solid #ccc;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
 
-.details h2 {
-    margin: 0 0 10px;
-    font-size: 20px; /* Menyesuaikan ukuran teks */
-    color: #333;
-}
+    /* Gaya untuk detail nama dan informasi orang */
+    .details {
+        flex: 1;
+        margin-right: 20px;
+    }
 
-.details p {
-    margin: 5px 0;
-    font-size: 14px; /* Menyesuaikan ukuran teks */
-    color: #555;
-}
+    .details h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+        color: #333;
+    }
 
-/* Gaya untuk ikon orang */
-.icon {
-    font-size: 40px; /* Menyesuaikan ukuran ikon */
-    color: #555;
-    padding: 10px; /* Memberi ruang untuk ikon agar lebih proporsional */
-}
+    .details p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* Gaya untuk ikon orang */
+    .icon {
+        font-size: 50px;
+        color: #555;
+    }
