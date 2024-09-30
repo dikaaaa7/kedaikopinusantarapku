@@ -12,25 +12,28 @@ function openInvitation() {
 const countdownElement = document.getElementById('countdown');
 const eventDate = new Date('Oktober 5, 2024 10:00:00').getTime();
 
-const updateCountdown = () => {
-    const now = new Date().getTime();
-    const distance = eventDate - now;
+const countdownDate = new Date("October 5, 2024 10:00:00").getTime();
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
 
-    countdownElement.innerHTML = `${days} Day | ${hours} Hour | ${minutes} Minutes `;
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    if (distance < 0) {
-        clearInterval(countdownInterval);
-        countdownElement.innerHTML = "Acara Sudah Dimulai!";
-    }
-};
+  document.getElementById("days").innerText = days + " Days";
+  document.getElementById("hours").innerText = hours + " Hours";
+  document.getElementById("minutes").innerText = minutes + " Minutes";
 
-const countdownInterval = setInterval(updateCountdown, 1000);
-updateCountdown();
+  if (distance < 0) {
+    document.getElementById("days").innerText = "0 Days";
+    document.getElementById("hours").innerText = "0 Hours";
+    document.getElementById("minutes").innerText = "0 Minutes";
+  }
+}
+
+setInterval(updateCountdown, 1000);
 
 
 function createGlitter() {
