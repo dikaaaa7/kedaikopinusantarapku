@@ -163,41 +163,6 @@ body {
     background-color:whitesmoke;
 }
 
-
-
- .countdown-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: #f3f3f3;
-    }
-
-    .countdown {
-        display: flex;
-        gap: 15px;
-    }
-
-    .countdown div {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    .countdown span {
-        font-size: 40px;
-        color: #ff4500;
-    }
-
-    .countdown div {
-        font-size: 20px;
-        color: #333;
-    }
-
-
-
 .gallery img {
     width: 30%;
     margin: 10px;
@@ -280,7 +245,6 @@ body {
 /* Style untuk item yang terdiri dari bulatan dan tulisan */
 .item {
     text-align: center;
-    margin-left:8px;
 }
 
 /* Style untuk bulatan */
