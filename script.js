@@ -10,9 +10,9 @@ function openInvitation() {
 
 // Countdown Timer
 const countdownElement = document.getElementById('countdown');
-const eventDate = new Date('Oktober 5, 2024 10:00:00').getTime();
+const eventDate = new Date('Oktober 11, 2024 10:00:00').getTime();
 
-const countdownDate = new Date("October 5, 2024 10:00:00").getTime();
+const countdownDate = new Date("October 11, 2024 10:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
