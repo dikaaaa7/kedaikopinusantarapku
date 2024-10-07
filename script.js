@@ -8,32 +8,28 @@ function openInvitation() {
     }, 600); // Wait for the flap animation to complete
 }
 
-// Countdown Timer
-const countdownElement = document.getElementById('countdown');
-const eventDate = new Date('Oktober 11, 2024 10:00:00').getTime();
+const countdownUnique = () => {
+    const targetDate = new Date("October 11, 2024 11:00:00").getTime();
+    const nowTime = new Date().getTime();
+    const timeDiff = targetDate - nowTime;
 
-const countdownDate = new Date("October 11, 2024 10:00:00").getTime();
+    const remainingDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const remainingHours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const remainingMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = countdownDate - now;
+    document.getElementById("ddays_unique987").innerText = remainingDays;
+    document.getElementById("hhours_alpha321").innerText = remainingHours;
+    document.getElementById("mminutes_omega654").innerText = remainingMinutes;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    if (timeDiff < 0) {
+        clearInterval(uniqueTimer);
+        document.getElementById("ddays_unique987").innerText = "0";
+        document.getElementById("hhours_alpha321").innerText = "0";
+        document.getElementById("mminutes_omega654").innerText = "0";
+    }
+};
 
-  document.getElementById("days").innerText = days + " Days";
-  document.getElementById("hours").innerText = hours + " Hours";
-  document.getElementById("minutes").innerText = minutes + " Minutes";
-
-  if (distance < 0) {
-    document.getElementById("days").innerText = "0 Days";
-    document.getElementById("hours").innerText = "0 Hours";
-    document.getElementById("minutes").innerText = "0 Minutes";
-  }
-}
-
-setInterval(updateCountdown, 1000);
+const uniqueTimer = setInterval(countdownUnique, 1000);
 
 
 function createGlitter() {
