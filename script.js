@@ -8,28 +8,32 @@ function openInvitation() {
     }, 600); // Wait for the flap animation to complete
 }
 
+
+
+
+
 const countdownUnique = () => {
     const targetDate = new Date("October 11, 2024 11:00:00").getTime();
     const nowTime = new Date().getTime();
     const timeDiff = targetDate - nowTime;
 
-    const remainingDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    const remainingHours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const remainingMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    if (timeDiff > 0) {
+        const remainingDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const remainingHours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const remainingMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("ddays_unique987").innerText = remainingDays;
-    document.getElementById("hhours_alpha321").innerText = remainingHours;
-    document.getElementById("mminutes_omega654").innerText = remainingMinutes;
-
-    if (timeDiff < 0) {
-        clearInterval(uniqueTimer);
+        document.getElementById("ddays_unique987").innerText = remainingDays;
+        document.getElementById("hhours_alpha321").innerText = remainingHours;
+        document.getElementById("mminutes_omega654").innerText = remainingMinutes;
+    } else {
         document.getElementById("ddays_unique987").innerText = "0";
         document.getElementById("hhours_alpha321").innerText = "0";
         document.getElementById("mminutes_omega654").innerText = "0";
     }
 };
 
-const uniqueTimer = setInterval(countdownUnique, 1000);
+countdownUnique();
+setInterval(countdownUnique, 1000);
 
 
 function createGlitter() {
