@@ -13,7 +13,7 @@ function openInvitation() {
 
 
 const countdownUnique = () => {
-    const targetDate = new Date("October 11, 2024 08:00:00").getTime();
+    const targetDate = new Date("October 11, 2024 11:00:00").getTime();
     const nowTime = new Date().getTime();
     const timeDiff = targetDate - nowTime;
 
