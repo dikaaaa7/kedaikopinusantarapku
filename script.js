@@ -8,57 +8,34 @@ function openInvitation() {
     }, 600); // Wait for the flap animation to complete
 }
 
-// Countdown Timer
-const countdownElement = document.getElementById('countdown');
-const eventDate = new Date('September 20, 2024 18:00:00').getTime();
-
-//const updateCountdown = () => {
- //   const now = new Date().getTime();
-   // const distance = eventDate - now;
-
-    //const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    //countdownElement.innerHTML = `${days} Day | ${hours} Hour | ${minutes} Minutes `;
-
-    //if (distance < 0) {
-        //clearInterval(countdownInterval);
-      //  clearInterval(countdownInterval);
-        //countdownElement.innerHTML = "Acara Sudah Dimulai!";
-   // }
-//};
-
-
-//const countdownInterval = setInterval(updateCountdown, 1000);
-//updateCountdown();
 
 
 
 
-const countdownDate = new Date("October 5, 2024 10:00:00").getTime();
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const distance = countdownDate - now;
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const countdownUnique = () => {
+    const targetDate = new Date("October 11, 2024 11:00:00").getTime();
+    const nowTime = new Date().getTime();
+    const timeDiff = targetDate - nowTime;
 
-  document.getElementById("days").innerText = days + " Days";
-  document.getElementById("hours").innerText = hours + " Hours";
-  document.getElementById("minutes").innerText = minutes + " Minutes";
+    if (timeDiff > 0) {
+        const remainingDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const remainingHours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const remainingMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
 
-  if (distance < 0) {
-    document.getElementById("days").innerText = "0 Days";
-    document.getElementById("hours").innerText = "0 Hours";
-    document.getElementById("minutes").innerText = "0 Minutes";
-  }
-}
+        document.getElementById("ddays_unique987").innerText = remainingDays;
+        document.getElementById("hhours_alpha321").innerText = remainingHours;
+        document.getElementById("mminutes_omega654").innerText = remainingMinutes;
+    } else {
+        document.getElementById("ddays_unique987").innerText = "0";
+        document.getElementById("hhours_alpha321").innerText = "0";
+        document.getElementById("mminutes_omega654").innerText = "0";
+    }
+};
 
-setInterval(updateCountdown, 1000);
+countdownUnique();
+setInterval(countdownUnique, 1000);
 
 
 
